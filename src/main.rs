@@ -9,12 +9,10 @@ fn main() {
 
     println!("Please input your guess.");
 
-    let mut i = 0;
+    let mut guess_count = 0;
     loop {
-        i += 1;
+        guess_count += 1;
         let mut guess = String::new();
-
-        // TODO: get autoformatting working
 
         io::stdin()
             .read_line(&mut guess)
@@ -35,6 +33,6 @@ fn main() {
                 break;
             }
         }
-        println!("You have guessed {i} times!")
+        println!("You have guessed {guess_count} times!")
     }
 }
